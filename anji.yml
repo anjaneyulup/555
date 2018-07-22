@@ -1,0 +1,9 @@
+--- # anji 
+- hosts: server2.abc.com
+  user: 444
+  sudo: yes
+  tasks:
+  - name: installing httpd package
+    yum: name=httpd state=installed
+  - name: servive httpd start
+    service: name=httpd state=started
